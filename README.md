@@ -4,7 +4,7 @@
 - **Live `/api/health` Endpoint**: https://dtgz0frj5azh5.cloudfront.net/api/health
 - **GitHub Repository**: https://github.com/ritwikareddykancharla/connect-blitz-cx
 
-ConnectBlitz is a configuration-driven omnichannel contact-center experience engine built on Python 3.12, deployed serverlessly on **Amazon CloudFront + Private S3 (OAC) + AWS Lambda (`python3.12`) + SQLite WAL + Amazon Bedrock (`us.amazon.nova-lite-v1:0`)** at **$0.00/hr idle infrastructure cost**.
+ConnectBlitz is a configuration-driven omnichannel contact-center experience engine deployed on AWS Lambda, deployed serverlessly on **Amazon CloudFront + Private S3 (OAC) + AWS Lambda (serverless) + SQLite WAL + Amazon Bedrock (`us.amazon.nova-lite-v1:0`)** at **$0.00/hr idle infrastructure cost**.
 
 ![ConnectBlitz System Architecture](docs/architecture.svg)
 

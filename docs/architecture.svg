@@ -9,7 +9,7 @@
 
   <!-- Layer 1: Serverless AWS Edge -->
   <rect x="24" y="18" width="1172" height="146" fill="#FFFFFF" stroke="#18181B" stroke-width="2" stroke-dasharray="8 6" />
-  <text x="40" y="42" font-family="sans-serif" font-size="16" font-weight="800" fill="#0369A1">1. Multi-Persona Browser Surfaces &amp; Serverless AWS Edge (CloudFront + Private S3 OAC + Python 3.12 Lambda)</text>
+  <text x="40" y="42" font-family="sans-serif" font-size="16" font-weight="800" fill="#0369A1">1. Multi-Persona Browser Surfaces &amp; Serverless AWS Edge (CloudFront + Private S3 OAC + AWS Lambda)</text>
 
   <rect x="40" y="56" width="225" height="86" fill="#E0F2FE" stroke="#18181B" stroke-width="2" />
   <text x="152" y="84" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="800" fill="#18181B">4 Synchronized Views</text>
@@ -32,7 +32,7 @@
   <text x="768" y="83" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#065F46">web/index.html · Public Access Blocked</text>
 
   <rect x="636" y="102" width="265" height="48" fill="#FEF3C7" stroke="#18181B" stroke-width="2" />
-  <text x="768" y="123" text-anchor="middle" font-family="sans-serif" font-size="13.5" font-weight="800" fill="#18181B">AWS Lambda API (Python 3.12)</text>
+  <text x="768" y="123" text-anchor="middle" font-family="sans-serif" font-size="13.5" font-weight="800" fill="#18181B">AWS Lambda API</text>
   <text x="768" y="140" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#92400E">connect_blitz/server.py · 512 MB</text>
 
   <rect x="926" y="48" width="250" height="100" fill="#FEF9C3" stroke="#18181B" stroke-width="2" />
