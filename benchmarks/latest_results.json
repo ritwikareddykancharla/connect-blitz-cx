@@ -1,0 +1,476 @@
+{
+  "benchmark_suite": "ConnectBlitz Omnichannel Contact Center Benchmark v1.0",
+  "benchmark_timestamp_utc": "2026-11-25T22:38:21Z",
+  "environment": {
+    "python_version": "3.14.6",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "aws_region": "us-west-2",
+    "bedrock_model": "us.amazon.nova-lite-v1:0",
+    "storage_engine": "SQLite WAL + SHA-256 Chained Contact Ledger"
+  },
+  "headline_kpis": {
+    "isolation_messages_tested": 200,
+    "whisper_messages_injected": 100,
+    "whisper_leaks_to_customer": 0,
+    "whisper_leak_rate_pct": 0.0,
+    "surface_render_p50_ms": 2.004,
+    "surface_render_p95_ms": 3.251,
+    "pii_cases_total": 40,
+    "pii_true_positives": 24,
+    "pii_true_negatives": 16,
+    "pii_false_positives": 0,
+    "pii_false_negatives": 0,
+    "pii_precision_pct": 100.0,
+    "pii_recall_pct": 100.0,
+    "pii_f1_pct": 100.0,
+    "raw_pii_leaks": 0,
+    "pii_scrub_p50_ms": 0.004,
+    "pii_scrub_p95_ms": 0.007,
+    "idempotent_submissions_total": 150,
+    "idempotent_unique_stored": 50,
+    "idempotent_duplicates_suppressed": 100,
+    "idempotent_accuracy_pct": 100.0,
+    "dedup_lookup_p50_ms": 2.556,
+    "warm_handoffs_tested": 12,
+    "warm_handoffs_preserved": 12,
+    "warm_handoff_preservation_pct": 100.0,
+    "customer_repeat_prompts_required": 0,
+    "config_checks_total": 16,
+    "config_checks_correct": 16,
+    "config_gate_accuracy_pct": 100.0,
+    "config_validate_p50_ms": 0.01,
+    "bedrock_scenarios_total": 12,
+    "bedrock_scenarios_succeeded": 12,
+    "bedrock_pass_rate_pct": 100.0,
+    "policy_grounding_rate_pct": 100.0,
+    "bedrock_whisper_p50_ms": 1492.59,
+    "bedrock_whisper_p95_ms": 2397.657,
+    "bedrock_mean_tokens": 617.3,
+    "ledger_rows_verified": 429,
+    "ledger_verify_ms": 3.627,
+    "ledger_chain_valid": true
+  },
+  "bedrock_scenario_results": [
+    {
+      "scenario_id": "CB-NOVA-01",
+      "tenant_id": "nordpeak-gear",
+      "expected_policy": "POL-NP-DAMAGED-24H",
+      "final_state": "AGENT_ACTIVE",
+      "zero_repeat_preserved": true,
+      "carried_order_id": "ORD-88412",
+      "frustration_score": 0.64,
+      "llm_engine": "amazon-bedrock",
+      "bedrock_latency_ms": 2394.21,
+      "bedrock_tokens": 626
+    },
+    {
+      "scenario_id": "CB-NOVA-02",
+      "tenant_id": "nordpeak-gear",
+      "expected_policy": "POL-NP-DAMAGED-24H",
+      "final_state": "AGENT_ACTIVE",
+      "zero_repeat_preserved": true,
+      "carried_order_id": "ORD-88412",
+      "frustration_score": 0.66,
+      "llm_engine": "amazon-bedrock",
+      "bedrock_latency_ms": 1788.26,
+      "bedrock_tokens": 687
+    },
+    {
+      "scenario_id": "CB-NOVA-03",
+      "tenant_id": "nordpeak-gear",
+      "expected_policy": "POL-NP-DAMAGED-24H",
+      "final_state": "AGENT_ACTIVE",
+      "zero_repeat_preserved": true,
+      "carried_order_id": "ORD-90219",
+      "frustration_score": 0.12,
+      "llm_engine": "amazon-bedrock",
+      "bedrock_latency_ms": 1530.59,
+      "bedrock_tokens": 617
+    },
+    {
+      "scenario_id": "CB-NOVA-04",
+      "tenant_id": "nordpeak-gear",
+      "expected_policy": "POL-NP-DAMAGED-24H",
+      "final_state": "AGENT_ACTIVE",
+      "zero_repeat_preserved": true,
+      "carried_order_id": "ORD-88412",
+      "frustration_score": 0.92,
+      "llm_engine": "amazon-bedrock",
+      "bedrock_latency_ms": 1719.34,
+      "bedrock_tokens": 619
+    },
+    {
+      "scenario_id": "CB-NOVA-05",
+      "tenant_id": "harbor-bank",
+      "expected_policy": "POL-HB-DISPUTE-ZERO",
+      "final_state": "AGENT_ACTIVE",
+      "zero_repeat_preserved": true,
+      "carried_order_id": "TXN-44109",
+      "frustration_score": 0.82,
+      "llm_engine": "amazon-bedrock",
+      "bedrock_latency_ms": 1117.76,
+      "bedrock_tokens": 636
+    },
+    {
+      "scenario_id": "CB-NOVA-06",
+      "tenant_id": "harbor-bank",
+      "expected_policy": "POL-HB-DISPUTE-ZERO",
+      "final_state": "AGENT_ACTIVE",
+      "zero_repeat_preserved": true,
+      "carried_order_id": "TXN-44109",
+      "frustration_score": 0.12,
+      "llm_engine": "amazon-bedrock",
+      "bedrock_latency_ms": 1454.59,
+      "bedrock_tokens": 569
+    },
+    {
+      "scenario_id": "CB-NOVA-07",
+      "tenant_id": "harbor-bank",
+      "expected_policy": "POL-HB-DISPUTE-ZERO",
+      "final_state": "AGENT_ACTIVE",
+      "zero_repeat_preserved": true,
+      "carried_order_id": "TXN-44109",
+      "frustration_score": 0.92,
+      "llm_engine": "amazon-bedrock",
+      "bedrock_latency_ms": 1438.44,
+      "bedrock_tokens": 614
+    },
+    {
+      "scenario_id": "CB-NOVA-08",
+      "tenant_id": "harbor-bank",
+      "expected_policy": "POL-HB-DISPUTE-ZERO",
+      "final_state": "AGENT_ACTIVE",
+      "zero_repeat_preserved": true,
+      "carried_order_id": "TXN-44109",
+      "frustration_score": 0.12,
+      "llm_engine": "amazon-bedrock",
+      "bedrock_latency_ms": 1434.88,
+      "bedrock_tokens": 533
+    },
+    {
+      "scenario_id": "CB-NOVA-09",
+      "tenant_id": "skyline-air",
+      "expected_policy": "POL-SA-IRROPS-WAIVER",
+      "final_state": "AGENT_ACTIVE",
+      "zero_repeat_preserved": true,
+      "carried_order_id": "FLT-204",
+      "frustration_score": 0.64,
+      "llm_engine": "amazon-bedrock",
+      "bedrock_latency_ms": 2401.87,
+      "bedrock_tokens": 622
+    },
+    {
+      "scenario_id": "CB-NOVA-10",
+      "tenant_id": "skyline-air",
+      "expected_policy": "POL-SA-IRROPS-WAIVER",
+      "final_state": "AGENT_ACTIVE",
+      "zero_repeat_preserved": true,
+      "carried_order_id": "FLT-204",
+      "frustration_score": 0.12,
+      "llm_engine": "amazon-bedrock",
+      "bedrock_latency_ms": 1633.7,
+      "bedrock_tokens": 588
+    },
+    {
+      "scenario_id": "CB-NOVA-11",
+      "tenant_id": "skyline-air",
+      "expected_policy": "POL-SA-IRROPS-WAIVER",
+      "final_state": "AGENT_ACTIVE",
+      "zero_repeat_preserved": true,
+      "carried_order_id": "FLT-204",
+      "frustration_score": 0.64,
+      "llm_engine": "amazon-bedrock",
+      "bedrock_latency_ms": 1326.0,
+      "bedrock_tokens": 579
+    },
+    {
+      "scenario_id": "CB-NOVA-12",
+      "tenant_id": "nordpeak-gear",
+      "expected_policy": "POL-NP-DAMAGED-24H",
+      "final_state": "AGENT_ACTIVE",
+      "zero_repeat_preserved": true,
+      "carried_order_id": "ORD-88412",
+      "frustration_score": 0.64,
+      "llm_engine": "amazon-bedrock",
+      "bedrock_latency_ms": 1384.28,
+      "bedrock_tokens": 718
+    }
+  ],
+  "pii_evaluation_summary": {
+    "tp": 24,
+    "tn": 16,
+    "fp": 0,
+    "fn": 0,
+    "precision_pct": 100.0,
+    "recall_pct": 100.0,
+    "f1_pct": 100.0,
+    "sample_cases": [
+      {
+        "case_id": "PII-01",
+        "expected_pii": true,
+        "detected_pii": true,
+        "redacted_count": 1,
+        "raw_secret_leaked": false,
+        "scrub_ms": 0.1577,
+        "verdict": "TRUE_POSITIVE"
+      },
+      {
+        "case_id": "PII-02",
+        "expected_pii": true,
+        "detected_pii": true,
+        "redacted_count": 1,
+        "raw_secret_leaked": false,
+        "scrub_ms": 0.011,
+        "verdict": "TRUE_POSITIVE"
+      },
+      {
+        "case_id": "PII-03",
+        "expected_pii": true,
+        "detected_pii": true,
+        "redacted_count": 1,
+        "raw_secret_leaked": false,
+        "scrub_ms": 0.0067,
+        "verdict": "TRUE_POSITIVE"
+      },
+      {
+        "case_id": "PII-04",
+        "expected_pii": true,
+        "detected_pii": true,
+        "redacted_count": 1,
+        "raw_secret_leaked": false,
+        "scrub_ms": 0.0056,
+        "verdict": "TRUE_POSITIVE"
+      },
+      {
+        "case_id": "PII-05",
+        "expected_pii": true,
+        "detected_pii": true,
+        "redacted_count": 1,
+        "raw_secret_leaked": false,
+        "scrub_ms": 0.0056,
+        "verdict": "TRUE_POSITIVE"
+      },
+      {
+        "case_id": "PII-06",
+        "expected_pii": true,
+        "detected_pii": true,
+        "redacted_count": 1,
+        "raw_secret_leaked": false,
+        "scrub_ms": 0.0057,
+        "verdict": "TRUE_POSITIVE"
+      },
+      {
+        "case_id": "PII-07",
+        "expected_pii": true,
+        "detected_pii": true,
+        "redacted_count": 1,
+        "raw_secret_leaked": false,
+        "scrub_ms": 0.0054,
+        "verdict": "TRUE_POSITIVE"
+      },
+      {
+        "case_id": "PII-08",
+        "expected_pii": true,
+        "detected_pii": true,
+        "redacted_count": 1,
+        "raw_secret_leaked": false,
+        "scrub_ms": 0.0052,
+        "verdict": "TRUE_POSITIVE"
+      },
+      {
+        "case_id": "PII-09",
+        "expected_pii": true,
+        "detected_pii": true,
+        "redacted_count": 1,
+        "raw_secret_leaked": false,
+        "scrub_ms": 0.0052,
+        "verdict": "TRUE_POSITIVE"
+      },
+      {
+        "case_id": "PII-10",
+        "expected_pii": true,
+        "detected_pii": true,
+        "redacted_count": 1,
+        "raw_secret_leaked": false,
+        "scrub_ms": 0.0043,
+        "verdict": "TRUE_POSITIVE"
+      },
+      {
+        "case_id": "PII-11",
+        "expected_pii": true,
+        "detected_pii": true,
+        "redacted_count": 1,
+        "raw_secret_leaked": false,
+        "scrub_ms": 0.0045,
+        "verdict": "TRUE_POSITIVE"
+      },
+      {
+        "case_id": "PII-12",
+        "expected_pii": true,
+        "detected_pii": true,
+        "redacted_count": 1,
+        "raw_secret_leaked": false,
+        "scrub_ms": 0.0034,
+        "verdict": "TRUE_POSITIVE"
+      },
+      {
+        "case_id": "PII-13",
+        "expected_pii": true,
+        "detected_pii": true,
+        "redacted_count": 1,
+        "raw_secret_leaked": false,
+        "scrub_ms": 0.0039,
+        "verdict": "TRUE_POSITIVE"
+      },
+      {
+        "case_id": "PII-14",
+        "expected_pii": true,
+        "detected_pii": true,
+        "redacted_count": 1,
+        "raw_secret_leaked": false,
+        "scrub_ms": 0.0037,
+        "verdict": "TRUE_POSITIVE"
+      },
+      {
+        "case_id": "PII-15",
+        "expected_pii": true,
+        "detected_pii": true,
+        "redacted_count": 1,
+        "raw_secret_leaked": false,
+        "scrub_ms": 0.0032,
+        "verdict": "TRUE_POSITIVE"
+      },
+      {
+        "case_id": "PII-16",
+        "expected_pii": true,
+        "detected_pii": true,
+        "redacted_count": 1,
+        "raw_secret_leaked": false,
+        "scrub_ms": 0.004,
+        "verdict": "TRUE_POSITIVE"
+      }
+    ]
+  },
+  "config_validation_matrix": [
+    {
+      "check_id": "CFG-ALLOW-01",
+      "expected_valid": true,
+      "actual_valid": true,
+      "body_contrast": 18.43,
+      "eval_ms": 0.088
+    },
+    {
+      "check_id": "CFG-ALLOW-02",
+      "expected_valid": true,
+      "actual_valid": true,
+      "body_contrast": 17.06,
+      "eval_ms": 0.018
+    },
+    {
+      "check_id": "CFG-ALLOW-03",
+      "expected_valid": true,
+      "actual_valid": true,
+      "body_contrast": 17.72,
+      "eval_ms": 0.014
+    },
+    {
+      "check_id": "CFG-ALLOW-04",
+      "expected_valid": true,
+      "actual_valid": true,
+      "body_contrast": 17.25,
+      "eval_ms": 0.012
+    },
+    {
+      "check_id": "CFG-ALLOW-05",
+      "expected_valid": true,
+      "actual_valid": true,
+      "body_contrast": 17.74,
+      "eval_ms": 0.011
+    },
+    {
+      "check_id": "CFG-ALLOW-06",
+      "expected_valid": true,
+      "actual_valid": true,
+      "body_contrast": 17.72,
+      "eval_ms": 0.01
+    },
+    {
+      "check_id": "CFG-ALLOW-07",
+      "expected_valid": true,
+      "actual_valid": true,
+      "body_contrast": 16.86,
+      "eval_ms": 0.01
+    },
+    {
+      "check_id": "CFG-ALLOW-08",
+      "expected_valid": true,
+      "actual_valid": true,
+      "body_contrast": 16.98,
+      "eval_ms": 0.01
+    },
+    {
+      "check_id": "CFG-BLOCK-01",
+      "mutation": "low_body_contrast",
+      "expected_valid": false,
+      "actual_valid": false,
+      "first_error": "WCAG 2.1 AA violation: theme.text_hex (#A1A1AA) on theme.background_hex (#FFFFFF) has contrast 2.56:1 (minimum 4.5:1 required).",
+      "eval_ms": 0.011
+    },
+    {
+      "check_id": "CFG-BLOCK-02",
+      "mutation": "low_button_contrast",
+      "expected_valid": false,
+      "actual_valid": false,
+      "first_error": "WCAG 2.1 AA violation: theme.button_text_hex (#FFFFFF) on theme.primary_hex (#FDE047) has contrast 1.32:1 (minimum 4.5:1 required).",
+      "eval_ms": 0.009
+    },
+    {
+      "check_id": "CFG-BLOCK-03",
+      "mutation": "disabled_pan_luhn",
+      "expected_valid": false,
+      "actual_valid": false,
+      "first_error": "pii_policy.scrub_pan_luhn must be enabled (True) for PCI-safe contact storage.",
+      "eval_ms": 0.009
+    },
+    {
+      "check_id": "CFG-BLOCK-04",
+      "mutation": "disabled_ssn_scrub",
+      "expected_valid": false,
+      "actual_valid": false,
+      "first_error": "pii_policy.scrub_ssn must be enabled (True) for customer transcript protection.",
+      "eval_ms": 0.009
+    },
+    {
+      "check_id": "CFG-BLOCK-05",
+      "mutation": "unknown_rich_card",
+      "expected_valid": false,
+      "actual_valid": false,
+      "first_error": "Unsupported rich card types ['RAW_SCRIPT_CARD']. Allowed: ['IDENTITY_VERIFIER', 'ORDER_PICKER', 'REFUND_ESTIMATOR', 'REPLACEMENT_CONFIRM', 'TIME_SLOT_SELECTOR'].",
+      "eval_ms": 0.012
+    },
+    {
+      "check_id": "CFG-BLOCK-06",
+      "mutation": "inverted_sla_thresholds",
+      "expected_valid": false,
+      "actual_valid": false,
+      "first_error": "sla_thresholds.auto_escalate_threshold must be greater than or equal to frustration_whisper_threshold.",
+      "eval_ms": 0.009
+    },
+    {
+      "check_id": "CFG-BLOCK-07",
+      "mutation": "invalid_hex_color",
+      "expected_valid": false,
+      "actual_valid": false,
+      "first_error": "theme.primary_hex ('blue') must be a valid 6-digit #RRGGBB color.",
+      "eval_ms": 0.008
+    },
+    {
+      "check_id": "CFG-BLOCK-08",
+      "mutation": "excessive_auto_refund_cap",
+      "expected_valid": false,
+      "actual_valid": false,
+      "first_error": "sla_thresholds.max_auto_refund_usd must be between 0.0 and 1000.0.",
+      "eval_ms": 0.009
+    }
+  ]
+}

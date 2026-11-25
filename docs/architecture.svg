@@ -1,0 +1,91 @@
+<svg viewBox="0 0 1220 730" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ConnectBlitz System Architecture Diagram">
+  <defs>
+    <pattern id="cbDotGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#D4D4D8" />
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="1220" height="730" fill="#FAF7F2" />
+  <rect x="0" y="0" width="1220" height="730" fill="url(#cbDotGrid)" opacity="0.72" />
+
+  <!-- Layer 1: Serverless AWS Edge -->
+  <rect x="24" y="18" width="1172" height="146" fill="#FFFFFF" stroke="#18181B" stroke-width="2" stroke-dasharray="8 6" />
+  <text x="40" y="42" font-family="sans-serif" font-size="16" font-weight="800" fill="#0369A1">1. Multi-Persona Browser Surfaces &amp; Serverless AWS Edge (CloudFront + Private S3 OAC + Python 3.12 Lambda)</text>
+
+  <rect x="40" y="56" width="225" height="86" fill="#E0F2FE" stroke="#18181B" stroke-width="2" />
+  <text x="152" y="84" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="800" fill="#18181B">4 Synchronized Views</text>
+  <text x="152" y="105" text-anchor="middle" font-family="monospace" font-size="10.5" font-weight="700" fill="#0369A1">Web ECW · Mobile · Agent · Sup</text>
+  <text x="152" y="124" text-anchor="middle" font-family="monospace" font-size="10" fill="#3F3F46">URL hash state · Light &amp; Dark</text>
+
+  <line x1="265" y1="99" x2="318" y2="99" stroke="#18181B" stroke-width="2" stroke-dasharray="5 4" />
+  <polygon points="312,94 322,99 312,104" fill="#18181B" />
+
+  <rect x="324" y="56" width="240" height="86" fill="#DBEAFE" stroke="#18181B" stroke-width="2" />
+  <text x="444" y="84" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="800" fill="#18181B">Amazon CloudFront</text>
+  <text x="444" y="105" text-anchor="middle" font-family="monospace" font-size="10.5" font-weight="700" fill="#1E3A8A">Single HTTPS Edge Router</text>
+  <text x="444" y="124" text-anchor="middle" font-family="monospace" font-size="10" fill="#3F3F46">/* -&gt; Private S3 · /api/* -&gt; Lambda</text>
+
+  <line x1="564" y1="78" x2="632" y2="68" stroke="#18181B" stroke-width="2" />
+  <line x1="564" y1="118" x2="632" y2="128" stroke="#18181B" stroke-width="2" />
+
+  <rect x="636" y="46" width="265" height="46" fill="#DCFCE7" stroke="#18181B" stroke-width="2" />
+  <text x="768" y="67" text-anchor="middle" font-family="sans-serif" font-size="13.5" font-weight="800" fill="#18181B">Private S3 Bucket (OAC)</text>
+  <text x="768" y="83" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#065F46">web/index.html · Public Access Blocked</text>
+
+  <rect x="636" y="102" width="265" height="48" fill="#FEF3C7" stroke="#18181B" stroke-width="2" />
+  <text x="768" y="123" text-anchor="middle" font-family="sans-serif" font-size="13.5" font-weight="800" fill="#18181B">AWS Lambda API (Python 3.12)</text>
+  <text x="768" y="140" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#92400E">connect_blitz/server.py · 512 MB</text>
+
+  <rect x="926" y="48" width="250" height="100" fill="#FEF9C3" stroke="#18181B" stroke-width="2" />
+  <text x="942" y="72" font-family="sans-serif" font-size="13.5" font-weight="800" fill="#854D0E">Zero Idle Infrastructure</text>
+  <text x="942" y="93" font-family="monospace" font-size="10" fill="#18181B">• $0.00/hr idle serverless edge</text>
+  <text x="942" y="112" font-family="monospace" font-size="10" fill="#18181B">• 1 schema -&gt; 4 persona views</text>
+  <text x="942" y="131" font-family="monospace" font-size="10" font-weight="700" fill="#0369A1">• 0% whisper leak to customers</text>
+
+  <!-- Layer 2: Config Contract & Real-Time PII Guard -->
+  <rect x="24" y="192" width="1172" height="146" fill="#F0F9FF" stroke="#0369A1" stroke-width="2" stroke-dasharray="8 6" />
+  <text x="40" y="216" font-family="sans-serif" font-size="16" font-weight="800" fill="#0369A1">2. Declarative Widget Configurator, WCAG AA Gate &amp; Real-Time Luhn PII Scrubber</text>
+
+  <rect x="42" y="232" width="356" height="90" fill="#FFFFFF" stroke="#18181B" stroke-width="2" />
+  <text x="220" y="259" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="800" fill="#18181B">Unified JSON Widget Schema</text>
+  <text x="220" y="280" text-anchor="middle" font-family="monospace" font-size="10" font-weight="700" fill="#0369A1">connect_blitz/widget_config.py</text>
+  <text x="220" y="299" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#3F3F46">WCAG 4.5:1 check · Rich card allowlist · SLA caps</text>
+
+  <rect x="432" y="232" width="356" height="90" fill="#FEE2E2" stroke="#18181B" stroke-width="2" />
+  <text x="610" y="259" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="800" fill="#991B1B">Real-Time Luhn PAN / SSN / OTP Guard</text>
+  <text x="610" y="280" text-anchor="middle" font-family="monospace" font-size="10" font-weight="700" fill="#18181B">connect_blitz/pii_transcript.py</text>
+  <text x="610" y="299" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#7F1D1D">ISO 7812 Luhn mod-10 · Preserves order IDs</text>
+
+  <rect x="822" y="232" width="356" height="90" fill="#EDE9FE" stroke="#18181B" stroke-width="2" />
+  <text x="1000" y="259" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="800" fill="#5B21B6">Idempotent Message Deduplication</text>
+  <text x="1000" y="280" text-anchor="middle" font-family="monospace" font-size="10" font-weight="700" fill="#18181B">UNIQUE(contact_id, client_msg_id)</text>
+  <text x="1000" y="299" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#4C1D95">Suppresses mobile/web retry duplicates cleanly</text>
+
+  <!-- Layer 3: Session Engine, Warm Handoff & Role Isolation -->
+  <rect x="24" y="366" width="1172" height="154" fill="#F0FDF4" stroke="#065F46" stroke-width="2" stroke-dasharray="8 6" />
+  <text x="40" y="390" font-family="sans-serif" font-size="16" font-weight="800" fill="#065F46">3. Omnichannel SQLite WAL State Machine, Zero-Repeat Warm Handoff &amp; Role-Scoped Visibility</text>
+
+  <rect x="42" y="408" width="548" height="96" fill="#DCFCE7" stroke="#18181B" stroke-width="2" />
+  <text x="316" y="435" text-anchor="middle" font-family="sans-serif" font-size="15.5" font-weight="800" fill="#18181B">Zero-Repeat Warm Handoff &amp; Slot Carryover</text>
+  <text x="316" y="457" text-anchor="middle" font-family="monospace" font-size="10" font-weight="700" fill="#065F46">SELF_SERVICE_BOT -&gt; QUEUED_WITH_CONTEXT -&gt; AGENT_ACTIVE</text>
+  <text x="316" y="479" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#3F3F46">Carries verified identity, order ID, card picks &amp; refund math (0 repeats)</text>
+
+  <rect x="630" y="408" width="548" height="96" fill="#E0F2FE" stroke="#18181B" stroke-width="2" />
+  <text x="904" y="435" text-anchor="middle" font-family="sans-serif" font-size="15.5" font-weight="800" fill="#18181B">Persona Visibility Isolation Projector</text>
+  <text x="904" y="457" text-anchor="middle" font-family="monospace" font-size="10" font-weight="700" fill="#0369A1">PUBLIC (All 4) · WHISPER (Agent + Sup) · BARGE_IN (All 4)</text>
+  <text x="904" y="479" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#3F3F46">Physically strips private coaching from Web ECW &amp; Mobile payloads</text>
+
+  <!-- Layer 4: Bedrock Whisper Copilot & Tamper-Evident Ledger -->
+  <rect x="42" y="552" width="548" height="150" fill="#F3E8FF" stroke="#18181B" stroke-width="2.2" />
+  <text x="316" y="582" text-anchor="middle" font-family="sans-serif" font-size="16.5" font-weight="800" fill="#5B21B6">4. Amazon Bedrock Agent Whisper Copilot</text>
+  <text x="316" y="605" text-anchor="middle" font-family="monospace" font-size="10.5" font-weight="700" fill="#18181B">us.amazon.nova-lite-v1:0 · Converse API</text>
+  <text x="316" y="627" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#4C1D95">Policy-grounded Whisper coaching + 1-click zero-repeat replies</text>
+  <rect x="96" y="646" width="440" height="34" fill="#FFFFFF" stroke="#18181B" stroke-width="1.6" />
+  <text x="316" y="668" text-anchor="middle" font-family="monospace" font-size="10" font-weight="700" fill="#0369A1">Sentiment &amp; SLA Escalation Radar + Live Nova Lite Converse</text>
+
+  <rect x="630" y="552" width="548" height="150" fill="#FEF3C7" stroke="#18181B" stroke-width="2.2" />
+  <text x="904" y="582" text-anchor="middle" font-family="sans-serif" font-size="16.5" font-weight="800" fill="#92400E">4. Tamper-Evident Contact Audit Ledger</text>
+  <text x="904" y="605" text-anchor="middle" font-family="monospace" font-size="10.5" font-weight="700" fill="#18181B">SQLite WAL · SHA-256 Cryptographic Hash Chain</text>
+  <text x="904" y="627" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#78350F">Hashes PII-scrubbed event + prev_hash from GENESIS</text>
+  <rect x="684" y="646" width="440" height="34" stroke="#18181B" stroke-width="1.6" fill="#DCFCE7" />
+  <text x="904" y="668" text-anchor="middle" font-family="monospace" font-size="10" font-weight="700" fill="#065F46">Detects Any Single-Row Post-Hoc SQLite Transcript Edit</text>
+</svg>

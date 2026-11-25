@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "connect-blitz-cx"
+version = "1.0.0"
+description = "ConnectBlitz: Unified Config-Driven Multi-Persona Contact Center Platform on Serverless AWS & Amazon Bedrock"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Ritwika Reddy Kancharla" }]
+dependencies = ["boto3>=1.34.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["connect_blitz*"]
